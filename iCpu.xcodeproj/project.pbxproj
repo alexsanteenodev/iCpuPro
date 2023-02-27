@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D02CDEA729A7F9660099CB92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02CDEA629A7F9660099CB92 /* Main.storyboard */; };
+		D03B45E729A3E191002C1B49 /* tempsensor.m in Sources */ = {isa = PBXBuildFile; fileRef = D03B45E629A3E191002C1B49 /* tempsensor.m */; };
+		D064F72529A6BBCD00953EB6 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E5AEB629A6A9120072FBBE /* ServiceManagement.framework */; };
+		D085967A29A6B21100E830C8 /* AutoLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = D0E5AEA229A6A3A50072FBBE /* AutoLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D08CDBD629A3EC53005E6B1B /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CDBD529A3EC53005E6B1B /* EventMonitor.swift */; };
+		D08CDBE229A3F176005E6B1B /* DataMiners in Resources */ = {isa = PBXBuildFile; fileRef = D08CDBE129A3F176005E6B1B /* DataMiners */; };
+		D08CDBE729A3F87B005E6B1B /* XRGTemperatureMiner.m in Sources */ = {isa = PBXBuildFile; fileRef = D08CDBE629A3F87B005E6B1B /* XRGTemperatureMiner.m */; };
+		D08CDBEA29A3F8C4005E6B1B /* XRGAppleSiliconSensorMiner.m in Sources */ = {isa = PBXBuildFile; fileRef = D08CDBE829A3F8C4005E6B1B /* XRGAppleSiliconSensorMiner.m */; };
+		D08CDBED29A3F8E0005E6B1B /* XRGStatsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D08CDBEC29A3F8E0005E6B1B /* XRGStatsManager.m */; };
+		D08CDBF329A3F97D005E6B1B /* SMCSensorGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = D08CDBEF29A3F97D005E6B1B /* SMCSensorGroup.m */; };
+		D08CDBF429A3F97D005E6B1B /* SMCSensors.m in Sources */ = {isa = PBXBuildFile; fileRef = D08CDBF229A3F97D005E6B1B /* SMCSensors.m */; };
+		D08CDBF729A3F98D005E6B1B /* XRGDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D08CDBF529A3F98D005E6B1B /* XRGDataSet.m */; };
+		D08CDBFA29A3F9A9005E6B1B /* SMCInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = D08CDBF929A3F9A9005E6B1B /* SMCInterface.m */; };
+		D08CDBFD29A3FE22005E6B1B /* XRGCPUMiner.m in Sources */ = {isa = PBXBuildFile; fileRef = D08CDBFB29A3FE22005E6B1B /* XRGCPUMiner.m */; };
+		D0E5AEA529A6A3A50072FBBE /* AutoLauncherAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5AEA429A6A3A50072FBBE /* AutoLauncherAppDelegate.swift */; };
+		D0F2453629A3DE9A00670A4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F2453529A3DE9A00670A4A /* AppDelegate.swift */; };
+		D0F2453A29A3DE9B00670A4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0F2453929A3DE9B00670A4A /* Assets.xcassets */; };
+		D0F2454829A3E04700670A4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F2454629A3E04700670A4A /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D085967929A6B1F400E830C8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				D085967A29A6B21100E830C8 /* AutoLauncher.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D02CDEA629A7F9660099CB92 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D03B45E529A3E191002C1B49 /* iCpu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iCpu-Bridging-Header.h"; sourceTree = "<group>"; };
+		D03B45E629A3E191002C1B49 /* tempsensor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tempsensor.m; sourceTree = "<group>"; };
+		D03B45E829A3E1AE002C1B49 /* tempsensor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tempsensor.h; sourceTree = "<group>"; };
+		D08CDBD529A3EC53005E6B1B /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
+		D08CDBE129A3F176005E6B1B /* DataMiners */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DataMiners; sourceTree = "<group>"; };
+		D08CDBE529A3F87B005E6B1B /* XRGTemperatureMiner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XRGTemperatureMiner.h; path = DataMiners/XRGTemperatureMiner.h; sourceTree = "<group>"; };
+		D08CDBE629A3F87B005E6B1B /* XRGTemperatureMiner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XRGTemperatureMiner.m; path = DataMiners/XRGTemperatureMiner.m; sourceTree = "<group>"; };
+		D08CDBE829A3F8C4005E6B1B /* XRGAppleSiliconSensorMiner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XRGAppleSiliconSensorMiner.m; path = DataMiners/APSL/XRGAppleSiliconSensorMiner.m; sourceTree = "<group>"; };
+		D08CDBE929A3F8C4005E6B1B /* XRGAppleSiliconSensorMiner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XRGAppleSiliconSensorMiner.h; path = DataMiners/APSL/XRGAppleSiliconSensorMiner.h; sourceTree = "<group>"; };
+		D08CDBEB29A3F8E0005E6B1B /* XRGStatsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XRGStatsManager.h; path = DataMiners/Utility/XRGStatsManager.h; sourceTree = "<group>"; };
+		D08CDBEC29A3F8E0005E6B1B /* XRGStatsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XRGStatsManager.m; path = DataMiners/Utility/XRGStatsManager.m; sourceTree = "<group>"; };
+		D08CDBEE29A3F951005E6B1B /* definitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = definitions.h; path = DataMiners/definitions.h; sourceTree = "<group>"; };
+		D08CDBEF29A3F97D005E6B1B /* SMCSensorGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMCSensorGroup.m; path = DataMiners/APSL/SMCSensorGroup.m; sourceTree = "<group>"; };
+		D08CDBF029A3F97D005E6B1B /* SMCSensorGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMCSensorGroup.h; path = DataMiners/APSL/SMCSensorGroup.h; sourceTree = "<group>"; };
+		D08CDBF129A3F97D005E6B1B /* SMCSensors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMCSensors.h; path = DataMiners/APSL/SMCSensors.h; sourceTree = "<group>"; };
+		D08CDBF229A3F97D005E6B1B /* SMCSensors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMCSensors.m; path = DataMiners/APSL/SMCSensors.m; sourceTree = "<group>"; };
+		D08CDBF529A3F98D005E6B1B /* XRGDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XRGDataSet.m; path = DataMiners/Utility/XRGDataSet.m; sourceTree = "<group>"; };
+		D08CDBF629A3F98D005E6B1B /* XRGDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XRGDataSet.h; path = DataMiners/Utility/XRGDataSet.h; sourceTree = "<group>"; };
+		D08CDBF829A3F9A9005E6B1B /* SMCInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMCInterface.h; path = DataMiners/APSL/SMCInterface.h; sourceTree = "<group>"; };
+		D08CDBF929A3F9A9005E6B1B /* SMCInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMCInterface.m; path = DataMiners/APSL/SMCInterface.m; sourceTree = "<group>"; };
+		D08CDBFB29A3FE22005E6B1B /* XRGCPUMiner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XRGCPUMiner.m; path = DataMiners/XRGCPUMiner.m; sourceTree = "<group>"; };
+		D08CDBFC29A3FE22005E6B1B /* XRGCPUMiner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XRGCPUMiner.h; path = DataMiners/XRGCPUMiner.h; sourceTree = "<group>"; };
+		D0E5AEA229A6A3A50072FBBE /* AutoLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0E5AEA429A6A3A50072FBBE /* AutoLauncherAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLauncherAppDelegate.swift; sourceTree = "<group>"; };
+		D0E5AEAD29A6A3A60072FBBE /* AutoLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutoLauncher.entitlements; sourceTree = "<group>"; };
+		D0E5AEB629A6A9120072FBBE /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		D0F2453229A3DE9A00670A4A /* iCpu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCpu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0F2453529A3DE9A00670A4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D0F2453929A3DE9B00670A4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D0F2453E29A3DE9B00670A4A /* iCpu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iCpu.entitlements; sourceTree = "<group>"; };
+		D0F2454729A3E04700670A4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../test/test/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0E5AE9F29A6A3A50072FBBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0F2452F29A3DE9A00670A4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D064F72529A6BBCD00953EB6 /* ServiceManagement.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D0E5AEA329A6A3A50072FBBE /* AutoLauncher */ = {
+			isa = PBXGroup;
+			children = (
+				D0E5AEA429A6A3A50072FBBE /* AutoLauncherAppDelegate.swift */,
+				D0E5AEAD29A6A3A60072FBBE /* AutoLauncher.entitlements */,
+				D02CDEA629A7F9660099CB92 /* Main.storyboard */,
+			);
+			path = AutoLauncher;
+			sourceTree = "<group>";
+		};
+		D0E5AEB529A6A9110072FBBE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0E5AEB629A6A9120072FBBE /* ServiceManagement.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0F2452929A3DE9A00670A4A = {
+			isa = PBXGroup;
+			children = (
+				D0F2453429A3DE9A00670A4A /* iCpu */,
+				D0E5AEA329A6A3A50072FBBE /* AutoLauncher */,
+				D0F2453329A3DE9A00670A4A /* Products */,
+				D0E5AEB529A6A9110072FBBE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D0F2453329A3DE9A00670A4A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0F2453229A3DE9A00670A4A /* iCpu.app */,
+				D0E5AEA229A6A3A50072FBBE /* AutoLauncher.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0F2453429A3DE9A00670A4A /* iCpu */ = {
+			isa = PBXGroup;
+			children = (
+				D0F2453529A3DE9A00670A4A /* AppDelegate.swift */,
+				D08CDBD529A3EC53005E6B1B /* EventMonitor.swift */,
+				D0F2454629A3E04700670A4A /* Main.storyboard */,
+				D0F2453929A3DE9B00670A4A /* Assets.xcassets */,
+				D0F2453E29A3DE9B00670A4A /* iCpu.entitlements */,
+				D03B45E629A3E191002C1B49 /* tempsensor.m */,
+				D03B45E829A3E1AE002C1B49 /* tempsensor.h */,
+				D08CDBE529A3F87B005E6B1B /* XRGTemperatureMiner.h */,
+				D08CDBE629A3F87B005E6B1B /* XRGTemperatureMiner.m */,
+				D08CDBE929A3F8C4005E6B1B /* XRGAppleSiliconSensorMiner.h */,
+				D08CDBEB29A3F8E0005E6B1B /* XRGStatsManager.h */,
+				D08CDBEC29A3F8E0005E6B1B /* XRGStatsManager.m */,
+				D08CDBE829A3F8C4005E6B1B /* XRGAppleSiliconSensorMiner.m */,
+				D08CDBF029A3F97D005E6B1B /* SMCSensorGroup.h */,
+				D08CDBEF29A3F97D005E6B1B /* SMCSensorGroup.m */,
+				D08CDBF129A3F97D005E6B1B /* SMCSensors.h */,
+				D08CDBF629A3F98D005E6B1B /* XRGDataSet.h */,
+				D08CDBF529A3F98D005E6B1B /* XRGDataSet.m */,
+				D08CDBF229A3F97D005E6B1B /* SMCSensors.m */,
+				D08CDBF829A3F9A9005E6B1B /* SMCInterface.h */,
+				D08CDBF929A3F9A9005E6B1B /* SMCInterface.m */,
+				D08CDBEE29A3F951005E6B1B /* definitions.h */,
+				D08CDBFC29A3FE22005E6B1B /* XRGCPUMiner.h */,
+				D08CDBFB29A3FE22005E6B1B /* XRGCPUMiner.m */,
+				D08CDBE129A3F176005E6B1B /* DataMiners */,
+				D03B45E529A3E191002C1B49 /* iCpu-Bridging-Header.h */,
+			);
+			path = iCpu;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0E5AEA129A6A3A50072FBBE /* AutoLauncher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0E5AEB029A6A3A60072FBBE /* Build configuration list for PBXNativeTarget "AutoLauncher" */;
+			buildPhases = (
+				D0E5AE9E29A6A3A50072FBBE /* Sources */,
+				D0E5AE9F29A6A3A50072FBBE /* Frameworks */,
+				D0E5AEA029A6A3A50072FBBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutoLauncher;
+			productName = AutoLauncher;
+			productReference = D0E5AEA229A6A3A50072FBBE /* AutoLauncher.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D0F2453129A3DE9A00670A4A /* iCpu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0F2454129A3DE9B00670A4A /* Build configuration list for PBXNativeTarget "iCpu" */;
+			buildPhases = (
+				D0F2452E29A3DE9A00670A4A /* Sources */,
+				D0F2452F29A3DE9A00670A4A /* Frameworks */,
+				D0F2453029A3DE9A00670A4A /* Resources */,
+				D085967929A6B1F400E830C8 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iCpu;
+			productName = iCpu;
+			productReference = D0F2453229A3DE9A00670A4A /* iCpu.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0F2452A29A3DE9A00670A4A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					D0E5AEA129A6A3A50072FBBE = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					D0F2453129A3DE9A00670A4A = {
+						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
+					};
+				};
+			};
+			buildConfigurationList = D0F2452D29A3DE9A00670A4A /* Build configuration list for PBXProject "iCpu" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D0F2452929A3DE9A00670A4A;
+			productRefGroup = D0F2453329A3DE9A00670A4A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0F2453129A3DE9A00670A4A /* iCpu */,
+				D0E5AEA129A6A3A50072FBBE /* AutoLauncher */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0E5AEA029A6A3A50072FBBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D02CDEA729A7F9660099CB92 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0F2453029A3DE9A00670A4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0F2453A29A3DE9B00670A4A /* Assets.xcassets in Resources */,
+				D0F2454829A3E04700670A4A /* Main.storyboard in Resources */,
+				D08CDBE229A3F176005E6B1B /* DataMiners in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0E5AE9E29A6A3A50072FBBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0E5AEA529A6A3A50072FBBE /* AutoLauncherAppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0F2452E29A3DE9A00670A4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D08CDBF729A3F98D005E6B1B /* XRGDataSet.m in Sources */,
+				D08CDBEA29A3F8C4005E6B1B /* XRGAppleSiliconSensorMiner.m in Sources */,
+				D08CDBE729A3F87B005E6B1B /* XRGTemperatureMiner.m in Sources */,
+				D08CDBFD29A3FE22005E6B1B /* XRGCPUMiner.m in Sources */,
+				D0F2453629A3DE9A00670A4A /* AppDelegate.swift in Sources */,
+				D03B45E729A3E191002C1B49 /* tempsensor.m in Sources */,
+				D08CDBF329A3F97D005E6B1B /* SMCSensorGroup.m in Sources */,
+				D08CDBED29A3F8E0005E6B1B /* XRGStatsManager.m in Sources */,
+				D08CDBD629A3EC53005E6B1B /* EventMonitor.swift in Sources */,
+				D08CDBFA29A3F9A9005E6B1B /* SMCInterface.m in Sources */,
+				D08CDBF429A3F97D005E6B1B /* SMCSensors.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D0F2454629A3E04700670A4A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0F2454729A3E04700670A4A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0E5AEAE29A6A3A60072FBBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AutoLauncher/AutoLauncher.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DS8PT626S9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSBackgroundOnly = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexsanteeno.AutoLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D0E5AEAF29A6A3A60072FBBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AutoLauncher/AutoLauncher.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DS8PT626S9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSBackgroundOnly = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexsanteeno.AutoLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		D0F2453F29A3DE9B00670A4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D0F2454029A3DE9B00670A4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		D0F2454229A3DE9B00670A4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = iCpu/iCpu.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DS8PT626S9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexsanteeno.iCpu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "iCpu/iCpu-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/Utility";
+			};
+			name = Debug;
+		};
+		D0F2454329A3DE9B00670A4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = iCpu/iCpu.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DS8PT626S9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexsanteeno.iCpu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "iCpu/iCpu-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/Utility";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0E5AEB029A6A3A60072FBBE /* Build configuration list for PBXNativeTarget "AutoLauncher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0E5AEAE29A6A3A60072FBBE /* Debug */,
+				D0E5AEAF29A6A3A60072FBBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0F2452D29A3DE9A00670A4A /* Build configuration list for PBXProject "iCpu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0F2453F29A3DE9B00670A4A /* Debug */,
+				D0F2454029A3DE9B00670A4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0F2454129A3DE9B00670A4A /* Build configuration list for PBXNativeTarget "iCpu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0F2454229A3DE9B00670A4A /* Debug */,
+				D0F2454329A3DE9B00670A4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0F2452A29A3DE9A00670A4A /* Project object */;
+}
