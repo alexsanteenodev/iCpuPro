@@ -3,5 +3,3 @@
 //
 
 #import "tempsensor.h"
-
-#import "XRGTemperatureMiner.h"

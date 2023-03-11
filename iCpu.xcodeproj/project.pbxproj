@@ -12,15 +12,6 @@
 		D064F72529A6BBCD00953EB6 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E5AEB629A6A9120072FBBE /* ServiceManagement.framework */; };
 		D085967A29A6B21100E830C8 /* AutoLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = D0E5AEA229A6A3A50072FBBE /* AutoLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D08CDBD629A3EC53005E6B1B /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CDBD529A3EC53005E6B1B /* EventMonitor.swift */; };
-		D08CDBE229A3F176005E6B1B /* DataMiners in Resources */ = {isa = PBXBuildFile; fileRef = D08CDBE129A3F176005E6B1B /* DataMiners */; };
-		D08CDBE729A3F87B005E6B1B /* XRGTemperatureMiner.m in Sources */ = {isa = PBXBuildFile; fileRef = D08CDBE629A3F87B005E6B1B /* XRGTemperatureMiner.m */; };
-		D08CDBEA29A3F8C4005E6B1B /* XRGAppleSiliconSensorMiner.m in Sources */ = {isa = PBXBuildFile; fileRef = D08CDBE829A3F8C4005E6B1B /* XRGAppleSiliconSensorMiner.m */; };
-		D08CDBED29A3F8E0005E6B1B /* XRGStatsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D08CDBEC29A3F8E0005E6B1B /* XRGStatsManager.m */; };
-		D08CDBF329A3F97D005E6B1B /* SMCSensorGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = D08CDBEF29A3F97D005E6B1B /* SMCSensorGroup.m */; };
-		D08CDBF429A3F97D005E6B1B /* SMCSensors.m in Sources */ = {isa = PBXBuildFile; fileRef = D08CDBF229A3F97D005E6B1B /* SMCSensors.m */; };
-		D08CDBF729A3F98D005E6B1B /* XRGDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D08CDBF529A3F98D005E6B1B /* XRGDataSet.m */; };
-		D08CDBFA29A3F9A9005E6B1B /* SMCInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = D08CDBF929A3F9A9005E6B1B /* SMCInterface.m */; };
-		D08CDBFD29A3FE22005E6B1B /* XRGCPUMiner.m in Sources */ = {isa = PBXBuildFile; fileRef = D08CDBFB29A3FE22005E6B1B /* XRGCPUMiner.m */; };
 		D0E5AEA529A6A3A50072FBBE /* AutoLauncherAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5AEA429A6A3A50072FBBE /* AutoLauncherAppDelegate.swift */; };
 		D0F2453629A3DE9A00670A4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F2453529A3DE9A00670A4A /* AppDelegate.swift */; };
 		D0F2453A29A3DE9B00670A4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0F2453929A3DE9B00670A4A /* Assets.xcassets */; };
@@ -46,24 +37,6 @@
 		D03B45E629A3E191002C1B49 /* tempsensor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tempsensor.m; sourceTree = "<group>"; };
 		D03B45E829A3E1AE002C1B49 /* tempsensor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tempsensor.h; sourceTree = "<group>"; };
 		D08CDBD529A3EC53005E6B1B /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
-		D08CDBE129A3F176005E6B1B /* DataMiners */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DataMiners; sourceTree = "<group>"; };
-		D08CDBE529A3F87B005E6B1B /* XRGTemperatureMiner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XRGTemperatureMiner.h; path = DataMiners/XRGTemperatureMiner.h; sourceTree = "<group>"; };
-		D08CDBE629A3F87B005E6B1B /* XRGTemperatureMiner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XRGTemperatureMiner.m; path = DataMiners/XRGTemperatureMiner.m; sourceTree = "<group>"; };
-		D08CDBE829A3F8C4005E6B1B /* XRGAppleSiliconSensorMiner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XRGAppleSiliconSensorMiner.m; path = DataMiners/APSL/XRGAppleSiliconSensorMiner.m; sourceTree = "<group>"; };
-		D08CDBE929A3F8C4005E6B1B /* XRGAppleSiliconSensorMiner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XRGAppleSiliconSensorMiner.h; path = DataMiners/APSL/XRGAppleSiliconSensorMiner.h; sourceTree = "<group>"; };
-		D08CDBEB29A3F8E0005E6B1B /* XRGStatsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XRGStatsManager.h; path = DataMiners/Utility/XRGStatsManager.h; sourceTree = "<group>"; };
-		D08CDBEC29A3F8E0005E6B1B /* XRGStatsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XRGStatsManager.m; path = DataMiners/Utility/XRGStatsManager.m; sourceTree = "<group>"; };
-		D08CDBEE29A3F951005E6B1B /* definitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = definitions.h; path = DataMiners/definitions.h; sourceTree = "<group>"; };
-		D08CDBEF29A3F97D005E6B1B /* SMCSensorGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMCSensorGroup.m; path = DataMiners/APSL/SMCSensorGroup.m; sourceTree = "<group>"; };
-		D08CDBF029A3F97D005E6B1B /* SMCSensorGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMCSensorGroup.h; path = DataMiners/APSL/SMCSensorGroup.h; sourceTree = "<group>"; };
-		D08CDBF129A3F97D005E6B1B /* SMCSensors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMCSensors.h; path = DataMiners/APSL/SMCSensors.h; sourceTree = "<group>"; };
-		D08CDBF229A3F97D005E6B1B /* SMCSensors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMCSensors.m; path = DataMiners/APSL/SMCSensors.m; sourceTree = "<group>"; };
-		D08CDBF529A3F98D005E6B1B /* XRGDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XRGDataSet.m; path = DataMiners/Utility/XRGDataSet.m; sourceTree = "<group>"; };
-		D08CDBF629A3F98D005E6B1B /* XRGDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XRGDataSet.h; path = DataMiners/Utility/XRGDataSet.h; sourceTree = "<group>"; };
-		D08CDBF829A3F9A9005E6B1B /* SMCInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMCInterface.h; path = DataMiners/APSL/SMCInterface.h; sourceTree = "<group>"; };
-		D08CDBF929A3F9A9005E6B1B /* SMCInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMCInterface.m; path = DataMiners/APSL/SMCInterface.m; sourceTree = "<group>"; };
-		D08CDBFB29A3FE22005E6B1B /* XRGCPUMiner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XRGCPUMiner.m; path = DataMiners/XRGCPUMiner.m; sourceTree = "<group>"; };
-		D08CDBFC29A3FE22005E6B1B /* XRGCPUMiner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XRGCPUMiner.h; path = DataMiners/XRGCPUMiner.h; sourceTree = "<group>"; };
 		D0E5AEA229A6A3A50072FBBE /* AutoLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E5AEA429A6A3A50072FBBE /* AutoLauncherAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLauncherAppDelegate.swift; sourceTree = "<group>"; };
 		D0E5AEAD29A6A3A60072FBBE /* AutoLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutoLauncher.entitlements; sourceTree = "<group>"; };
@@ -141,24 +114,6 @@
 				D0F2453E29A3DE9B00670A4A /* iCpu.entitlements */,
 				D03B45E629A3E191002C1B49 /* tempsensor.m */,
 				D03B45E829A3E1AE002C1B49 /* tempsensor.h */,
-				D08CDBE529A3F87B005E6B1B /* XRGTemperatureMiner.h */,
-				D08CDBE629A3F87B005E6B1B /* XRGTemperatureMiner.m */,
-				D08CDBE929A3F8C4005E6B1B /* XRGAppleSiliconSensorMiner.h */,
-				D08CDBEB29A3F8E0005E6B1B /* XRGStatsManager.h */,
-				D08CDBEC29A3F8E0005E6B1B /* XRGStatsManager.m */,
-				D08CDBE829A3F8C4005E6B1B /* XRGAppleSiliconSensorMiner.m */,
-				D08CDBF029A3F97D005E6B1B /* SMCSensorGroup.h */,
-				D08CDBEF29A3F97D005E6B1B /* SMCSensorGroup.m */,
-				D08CDBF129A3F97D005E6B1B /* SMCSensors.h */,
-				D08CDBF629A3F98D005E6B1B /* XRGDataSet.h */,
-				D08CDBF529A3F98D005E6B1B /* XRGDataSet.m */,
-				D08CDBF229A3F97D005E6B1B /* SMCSensors.m */,
-				D08CDBF829A3F9A9005E6B1B /* SMCInterface.h */,
-				D08CDBF929A3F9A9005E6B1B /* SMCInterface.m */,
-				D08CDBEE29A3F951005E6B1B /* definitions.h */,
-				D08CDBFC29A3FE22005E6B1B /* XRGCPUMiner.h */,
-				D08CDBFB29A3FE22005E6B1B /* XRGCPUMiner.m */,
-				D08CDBE129A3F176005E6B1B /* DataMiners */,
 				D03B45E529A3E191002C1B49 /* iCpu-Bridging-Header.h */,
 			);
 			path = iCpu;
@@ -255,7 +210,6 @@
 			files = (
 				D0F2453A29A3DE9B00670A4A /* Assets.xcassets in Resources */,
 				D0F2454829A3E04700670A4A /* Main.storyboard in Resources */,
-				D08CDBE229A3F176005E6B1B /* DataMiners in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,17 +228,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D08CDBF729A3F98D005E6B1B /* XRGDataSet.m in Sources */,
-				D08CDBEA29A3F8C4005E6B1B /* XRGAppleSiliconSensorMiner.m in Sources */,
-				D08CDBE729A3F87B005E6B1B /* XRGTemperatureMiner.m in Sources */,
-				D08CDBFD29A3FE22005E6B1B /* XRGCPUMiner.m in Sources */,
 				D0F2453629A3DE9A00670A4A /* AppDelegate.swift in Sources */,
 				D03B45E729A3E191002C1B49 /* tempsensor.m in Sources */,
-				D08CDBF329A3F97D005E6B1B /* SMCSensorGroup.m in Sources */,
-				D08CDBED29A3F8E0005E6B1B /* XRGStatsManager.m in Sources */,
 				D08CDBD629A3EC53005E6B1B /* EventMonitor.swift in Sources */,
-				D08CDBFA29A3F9A9005E6B1B /* SMCInterface.m in Sources */,
-				D08CDBF429A3F97D005E6B1B /* SMCSensors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

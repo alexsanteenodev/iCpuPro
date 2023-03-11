@@ -1,7 +1,4 @@
 #import "tempsensor.h"
-#import "XRGCPUMiner.h"
-#import "XRGTemperatureMiner.h"
-#import "definitions.h"
 #include <sys/sysctl.h>
 
 #include <IOKit/hidsystem/IOHIDEventSystemClient.h>
@@ -32,15 +29,6 @@ int IOHIDEventSystemClientSetMatchingMultiple(IOHIDEventSystemClientRef client, 
 
 
 @implementation TempSensor
-
-- (BOOL)showUnknownSensors {
-    BOOL showUnknown = [[NSUserDefaults standardUserDefaults] boolForKey:XRG_tempShowUnknownSensors];
-    
-    // show all unnamed sensors if very few are known
-    showUnknown |= [XRGTemperatureMiner shared].smcSensors.knownTemperatureKeys.count < 10;
-
-    return showUnknown;
-}
 
 // calculate average CPU temperature of all cores
 - (NSString *)averageTemperatureFromArray:(NSArray *)temperaturesArray {
@@ -137,32 +125,6 @@ NSArray* returnThermalValues(void) {
     
     return resultString;
 }
-
-- (NSMutableString *) printValues {
-    // Copy text to a clipboard.
-        NSMutableString *copyText = [[NSMutableString alloc] init];
-
-        NSString *appVersion = [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"];
-        if (!appVersion) appVersion = @"";
-        [[XRGTemperatureMiner shared] reset];
-    
-        [[XRGTemperatureMiner shared] updateCurrentTemperatures:[self showUnknownSensors]];
-    
-        [copyText appendFormat:@"XRG %@\n", appVersion];
-        [copyText appendFormat:@"Mac model: %@\n", [XRGCPUMiner systemModelIdentifier]];
-        [copyText appendFormat:@"Running macOS %@\n\n", [[NSProcessInfo processInfo] operatingSystemVersionString]];
-        [copyText appendString:@"Discovered Sensors:\n"];
-
-        for (NSString *sensorKey in [[XRGTemperatureMiner shared] locationKeysIncludingUnknown:YES]) {
-            
-            XRGSensorData *sensor = [[XRGTemperatureMiner shared] sensorForLocation:sensorKey];
-
-            [copyText appendFormat:@"\t%@:  %.1f\n", sensor.label, sensor.currentValue];
-        }
-
-//         NSLog(@"%@", copyText);
-    return copyText;
-    }
 
 @end
 

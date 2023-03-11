@@ -46,8 +46,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Create the status item
         self.statusBarItem = NSStatusBar.system.statusItem(withLength: CGFloat(NSStatusItem.variableLength))
         let tempsensor = TempSensor()
-            
-        tempsensor.printValues()
+        
         
         if let button = self.statusBarItem.button {
             button.title=tempsensor.getTemperature()
@@ -68,9 +67,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
           }
         }
         
-        var path = Bundle.allBundles
-        print("path")
-        NSWorkspace.shared.launchApplication(path as String)
         
         NSApp.activate(ignoringOtherApps: true)
         
