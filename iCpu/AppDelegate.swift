@@ -7,6 +7,7 @@
 import Cocoa
 import SwiftUI
 import ServiceManagement
+import LaunchAtLogin
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -15,14 +16,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var statusBarItem: NSStatusItem!
     var timer: Timer!
     var eventMonitor: EventMonitor?
+    var isFarenheit: Bool = false
 
-    @State private var launchAtLogin = false {
-        didSet {
-            SMLoginItemSetEnabled(Constants.helperBundleID as CFString,
-                                  launchAtLogin)
-        }
-    }
-    
     private struct Constants {
         // Helper Application Bundle Identifier
         static let helperBundleID = "com.alexsanteeno.AutoLauncher"
@@ -30,13 +25,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
 
-//        let view  = ContentView()
-        
-        //        let tempMiner = XRGTemperatureMiner()
-//        let keys = tempMiner.locationKeys(includingUnknown: true)
-////        let tempData = tempMiner.locationKeys(includingUnknown: true)
-//        print(keys)
-        
+        isFarenheit = UserDefaults.standard.bool(forKey: "isFarenheit")
+
         // Create the popover
         let popover = NSPopover()
         popover.contentSize = NSSize(width: 1400, height: 400)
@@ -49,12 +39,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         
         if let button = self.statusBarItem.button {
-            button.title=tempsensor.getTemperature()
+            let celsiusTemperature = tempsensor.getTemperature()
+
+            button.title = self.convertTemperature(fromCelsius: celsiusTemperature)
             button.action = #selector(togglePopover(_:))
             
             self.timer = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: true) { _ in
-
-                button.title = tempsensor.getTemperature()
+                let celsiusTemperature = tempsensor.getTemperature()
+                button.title = self.convertTemperature(fromCelsius: celsiusTemperature)
             }
 
         }
@@ -86,6 +78,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func constructMenu() {
         
+        let menu = NSMenu()
+        menu.addItem(self.toggleMenuItem())
+        menu.addItem(NSMenuItem.separator())
+        
+        menu.addItem(self.tempMenuItem())
+        menu.addItem(NSMenuItem.separator())
+        
+        menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
+
+        statusBarItem.menu = menu
+    }
+    
+    
+    @objc func toggleMenuItem()->NSMenuItem {
         
         let toggleMenuItem = NSMenuItem()
 
@@ -98,16 +104,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let switchView = NSSwitch(frame: NSRect(x: 0, y: 0, width: 25, height: 22) )
         switchView.target = self
         switchView.action = #selector(toggleSwitchClicked(_:))
-        
-        
-        let foundHelper = NSWorkspace.shared.runningApplications.contains {
-            $0.bundleIdentifier == Constants.helperBundleID
-        }
-
-        
-        switchView.state = foundHelper ? .on : .off
-        
-//        switchView.state = launchAtLogin==true ? .on : .off
+        switchView.state = LaunchAtLogin.isEnabled ? .on : .off
         
         let stackView = NSStackView(views: [textField, switchView])
         stackView.orientation = .horizontal
@@ -126,25 +123,67 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         toggleMenuItem.view = toggleMenuItemView
         toggleMenuItem.indentationLevel = 1 // set the same indentation level as the "Quit" menu item
 
-        
-        let menu = NSMenu()
-        menu.addItem(toggleMenuItem)
-        menu.addItem(NSMenuItem.separator())
-        menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
-        
-
-        statusBarItem.menu = menu
+        return toggleMenuItem
     }
+    
+    @objc func tempMenuItem()->NSMenuItem {
+        let celsiusMenuItem = NSMenuItem(title: "Celsius", action: #selector(toggleTemperatureUnit(_:)), keyEquivalent: "")
+        celsiusMenuItem.tag = 0 // Tag the menu item to identify the selected unit later
+        celsiusMenuItem.state =  isFarenheit ? .off : .on // Set the initial state to on, since Celsius is the default
+
+        let fahrenheitMenuItem = NSMenuItem(title: "Fahrenheit", action: #selector(toggleTemperatureUnit(_:)), keyEquivalent: "")
+        fahrenheitMenuItem.tag = 1 // Tag the menu item to identify the selected unit later
+        fahrenheitMenuItem.state =  isFarenheit ? .on : .off // Set the initial state to on, since Celsius is the default
+
+        let temperatureUnitMenu = NSMenu(title: "Temperature Unit")
+        temperatureUnitMenu.addItem(celsiusMenuItem)
+        temperatureUnitMenu.addItem(fahrenheitMenuItem)
+
+        let temperatureUnitMenuItem = NSMenuItem(title: "Temperature Unit", action: nil, keyEquivalent: "")
+        temperatureUnitMenuItem.submenu = temperatureUnitMenu
+        return temperatureUnitMenuItem
+
+    }
+    
     
     @objc func toggleSwitchClicked(_ sender: NSMenuItem) {
         let isAuto = sender.state == .on ? true : false
-    
-        print("Switch clicked: \(isAuto)")
-
-        
-        SMLoginItemSetEnabled(Constants.helperBundleID as CFString, isAuto)
-
+        LaunchAtLogin.isEnabled = isAuto
     }
+    
+    @objc func convertTemperature(fromCelsius celsiusTemperature: Int)-> String {
+        if(isFarenheit){
+            let value =  (celsiusTemperature * 9/5) + 32
+            return "\(value)°F"
+        }
+        return "\(celsiusTemperature)°C"
+    }
+    
+    func convertToFahrenheit(fromCelsius celsiusTemperature: String) -> String? {
+        guard let celsiusValue = Int(celsiusTemperature) else {
+            return nil
+        }
+        let fahrenheitTemperature = (celsiusValue * 9/5) + 32
+        return "\(fahrenheitTemperature)°F"
+    }
+
+    @objc func toggleTemperatureUnit(_ sender: NSMenuItem) {
+        // Uncheck the other menu item
+        for item in sender.menu!.items where item != sender {
+            item.state = .off
+        }
+        sender.state = .on
+
+        if sender.tag == 0 {
+            // Celsius selected
+            isFarenheit = false
+        } else if sender.tag == 1 {
+            // Fahrenheit selected
+            isFarenheit = true
+        }
+        UserDefaults.standard.set(isFarenheit, forKey: "isFarenheit")
+    }
+
 
     
     func closePopover(sender: Any?) {

@@ -31,7 +31,7 @@ int IOHIDEventSystemClientSetMatchingMultiple(IOHIDEventSystemClientRef client, 
 @implementation TempSensor
 
 // calculate average CPU temperature of all cores
-- (NSString *)averageTemperatureFromArray:(NSArray *)temperaturesArray {
+- (NSInteger)averageTemperatureFromArray:(NSArray *)temperaturesArray {
     
     NSArray *sortedArray = [temperaturesArray sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
         double temp1 = [obj1 doubleValue];
@@ -62,10 +62,11 @@ int IOHIDEventSystemClientSetMatchingMultiple(IOHIDEventSystemClientRef client, 
     
     double roundedUpTemp = ceil(average);
     
-    int averageInt = (int) roundedUpTemp;
-    
-    NSString *resultString = [NSString stringWithFormat:@"%d°C", averageInt];
-    return resultString;
+    NSInteger averageInt = (int) roundedUpTemp;
+    NSInteger nsi = (NSInteger) averageInt;
+
+//    NSString *resultString = [NSString stringWithFormat:@"%d°C", averageInt];
+    return nsi;
 }
 
 // create a dict ref, like for temperature sensor {"PrimaryUsagePage":0xff00, "PrimaryUsage":0x5}
@@ -115,20 +116,15 @@ NSArray* returnThermalValues(void) {
     return CFBridgingRelease(getThermalValues(currentSensors));
 }
 
-- (NSString *)getTemperature {
+- (NSInteger)getTemperature {
     
     NSArray *thermalValuesArray = returnThermalValues();
     
 //    NSLog(@"%@", thermalValuesArray);
 
-    NSString *resultString = [self averageTemperatureFromArray:thermalValuesArray];
+    NSInteger result = [self averageTemperatureFromArray:thermalValuesArray];
     
-    return resultString;
+    return result;
 }
 
 @end
-
-
-
-
-

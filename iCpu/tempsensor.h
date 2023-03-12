@@ -4,6 +4,6 @@
 
 @property (strong, nonatomic) id temperature;
 
-- (NSString*) getTemperature;
+- (NSInteger) getTemperature;
 
 @end
